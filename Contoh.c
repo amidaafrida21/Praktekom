@@ -42,26 +42,27 @@ int main()
 
 #include <stdio.h>
 
-int main(void) 
-{
-   int tinggi_segitiga,i,j,k;
-   printf("Input tinggi Pramid: "); 
-   scanf("%d",&tinggi_segitiga);
-
-   printf("\n");
-
-   for(i=1; i<=tinggi_segitiga; i++){
-    for(j=1; j<=tinggi_segitiga; j++){
-        printf(" ");
-    }
-
-    for(k=1; k<=i; k++){
-        printf(" #");
-    }
+int main(void) {
+    int tinggi_segitiga, i, j;
+    
+    printf("Input tinggi Piramid: ");
+    scanf("%d", &tinggi_segitiga);
     printf("\n");
-   }
-
-   return 0;
+    
+    for(i = 1; i <= tinggi_segitiga; i++) {
+        // Mencetak spasi
+        for(j = 1; j <= tinggi_segitiga-i; j++) {
+            printf(" ");
+        }
+        
+        // Mencetak pagar (#)
+        for(j = 1; j <= i; j++) {
+            printf("# ");
+        }
+        printf("\n");
+    }
+    
+    return 0;
 }
 
 #include <stdio.h>
